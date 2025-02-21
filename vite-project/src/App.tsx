@@ -11,6 +11,7 @@ function App() {
   // внутри скобок - начальное значение
   
   const [counter, setCounter] = useState(0)
+  const [flag,setFlag] = useState(true);
 
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
      {/* на клик кнопки вызываем увеличение на 1 */}
      <button onClick={() => setCounter(counter + 1)}>+1</button>
      <button onClick={() => setCounter(counter - 1)}>-1</button>
+     <button style={{color: flag ? "red":"blue"}} onClick={() => setFlag(!flag)}>Переключение bool</button>     
     </>
   )
 }
